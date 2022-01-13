@@ -1,6 +1,7 @@
 # syntax = edrevo/dockerfile-plus
 FROM docker.io/library/alpine:latest AS copier
 
+RUN wget https://www.cyberpower.com/global/en/File/GetFileSampleByType?fileId=SU-20040001-04&fileType=Download%20Center&fileSubType=FileOriginal -o ppb-linux-x86_64.sh
 COPY install-remote.exp install.exp
 
 INCLUDE+ Dockerfile

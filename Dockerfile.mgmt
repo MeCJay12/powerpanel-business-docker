@@ -1,0 +1,7 @@
+# syntax = edrevo/dockerfile-plus
+FROM docker.io/library/alpine:latest AS copier
+
+RUN wget https://dl4jz3rbrsfum.cloudfront.net/software/ppb470_mgt-linux-x86_x64.sh -o ppb-linux-x86_64.sh
+COPY install-mgmt.exp install.exp
+
+INCLUDE Dockerfile
