@@ -21,9 +21,6 @@ RUN chmod +x ppb-linux-x86_64.sh && chmod +x install.exp && expect -d ./install.
 EXPOSE 3052 
 EXPOSE 53568
 EXPOSE 162
-VOLUME ["/usr/local/ppbe/db_local/"]
-VOLUME ["/usr/local/ppbe/db_remote/"]
-VOLUME ["/usr/local/ppbe/db_management/"]
 
 HEALTHCHECK CMD curl -vs --fail http://127.0.0.1:3052/ || exit 1
 ENTRYPOINT ["/usr/local/ppbe/ppbed", "run"]
